@@ -1,4 +1,6 @@
-**Meow Screen Cinemas** is a responsive and user-friendly movie ticket booking website built for web development fundamentals coursework. It allows users to browse currently screening films, check showtimes, and book tickets easily from any device.
+# 🎬 Meow Screen Cinemas 
+
+Meow Screen Cinemas is a responsive and user-friendly movie ticket booking website built for web development fundamentals coursework. It allows users to browse currently screening films, check showtimes, and book tickets easily from any device.
 
 ## 🌟 Features
 - User registration and login with secure form validation  
