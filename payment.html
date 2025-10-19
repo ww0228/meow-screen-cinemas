@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Page</title>
+    <link rel="stylesheet" href="payment.css">
+</head>
+<body>
+    <header>
+        <div class="navbar">
+            <div class="logo">
+                <img src="pics/logo.png" width="130px" height="130px">  
+            </div>
+            <nav>
+                <ul id="menuitems">
+                    <li><a href="homepage.html">Home</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                    <li><a href="account.html">Account</a></li>
+                </ul>
+            </nav>
+            <a href="contact.html">
+                <img src="pics/phone.png" width="30px" height="30px"></a>
+                <img src="pics/menu.png" class="menu-icon" onclick="menutoggle()">
+        </div>
+     </header>
+     <div id="title-container"><h1>PAYMENT PAGE</h1></div>
+    <div id="outerpay-container">
+        <div id="paytitle-container">
+        <img id="fpx-image" src="pics/fpx.jpg" alt="FPX-Logo" title="FPX BANKING">
+        <div>
+        <div class="payment-container">
+            <h2>Total: RM50</h2>
+            <form id="payment-form">
+                <div class="form-group">
+                    <label for="cardholder-name">Cardholder Name:</label>
+                    <input type="text" id="cardholder-name" placeholder="Cardholder Name">
+                    <span id="cardholder-name-error" class="error-message"></span>
+                </div>
+                <div class="form-group">
+                    <label for="bank-name">Bank Name:</label>
+                    <select id="bank-name" name="bank-name">
+                        <option>Select a bank:</option>
+                        <option value="cimb">CIMB Bank</option>
+                        <option value="maybank">Maybank</option>
+                        <option value="citibank">CitiBank</option>
+                        <option value="hongleong">Hong Leong Bank</option>
+                        <option value="affin">Affin Bank</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="card-number">Card Number:</label>
+                    <input type="text" id="card-number" placeholder="Card number must be numeric and up to 19 digits">
+                    <span id="card-number-error" class="error-message"></span>
+                </div>
+                <div class="form-group">
+                    <label for="expiry-date">Expiry Date:</label>
+                    <input type="text" id="expiry-date" placeholder="MM/YY">
+                    <span id="expiry-date-error" class="error-message"></span>
+                </div>
+                <div class="form-group">
+                    <label for="cvv">CVV:</label>
+                    <input type="text" id="cvv" placeholder="XXX">
+                    <span id="cvv-error" class="error-message"></span>
+                </div>
+                <div class="form-group">
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" placeholder="Enter password">
+                    <span id="password-error" class="error-message"></span>
+                </div>
+                <button type="submit">Pay Now</button>
+            </form>
+            <p id="message"></p>
+        </div>
+    </div>
+    <footer></footer>
+    <script src="payment.js"></script>
+</body>
+</html>

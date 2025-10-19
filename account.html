@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Profile</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            font-family: 'Segoe Ui', sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+        }
+
+        main {
+            padding: 2rem;
+            max-width: 800px;
+            margin: auto;
+        }
+
+        .profile {
+            margin-bottom: 2rem; 
+        }
+
+        .profile p {
+            margin: 0.5rem 0;
+        }
+
+        .profile-details {
+            margin-bottom: 1em;
+        }
+
+        .profile-actions {
+            display: flex;
+            gap: 1em; 
+        }
+
+        .profile-actions button {
+            margin-top: 10px;
+            padding: 10px 20px; 
+            background-color: #ff523b;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px; 
+            font-size: 15px;
+        }
+
+        .profile-actions button:hover {
+            background-color: #d62b00;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="navbar">
+            <div class="logo">
+                <img src="pics/logo.png" width="130px" height="130px">  
+            </div>
+            <nav>
+                <ul id="menuitems">
+                    <li><a href="homepage.html">Home</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                    <li><a href="account.html">Account</a></li>
+                </ul>
+            </nav>
+            <div class="search-bar">
+                <input type="text" placeholder="Search for movies...">
+                <button type="submit">Search</button>
+            </div>
+            <a href="contact.html">
+                <img src="pics/phone.png" width="30px" height="30px"></a>
+                <img src="pics/menu.png" class="menu-icon" onclick="menutoggle()">
+        </div>
+    </div>   
+
+    <main>
+        <section class = "profile">
+            <div>
+            <h2>Welcome, <span id="userName"></span>!</h2>
+            <img src="pics/profile.png" alt="Profile Photo" id="profilePhoto">
+            </div> 
+
+            <div class="profile-details">
+                <h3>Profile Information</h3>
+                <p><strong>Name:</strong> <span id="profileName"></span></p>
+                <p><strong>Email:</strong> <span id="profileEmail"></span></p> 
+                <p><strong>Member Since:</strong> August 1, 2024</p>             
+                <button>Edit Profile</button>
+                <button>View Booking History</button>
+                <button>Change Password</button>
+            </div>
+         </section>
+    </main>
+
+    <div class="footer">
+        <div class="footer-container">
+            <div class="row">
+                <div class="footer-col-1">
+                    <h3>Download Our App</h3>
+                    <p>Available on Android and IOS today.</p>
+                    <div class="app-logo">
+                        <img src="pics/playstore.png">
+                        <img src="pics/appstore.png">
+                    </div>
+                </div>
+                <div class="footer-col-4">
+                    <h3>Follow us on:</h3>
+                    <ul>
+                        <li><img src="pics/insta1.jpeg" width="30px"></li>
+                        <li><img src="pics/facebook.png" width="30px"></li>
+                        <li><img src="pics/logo-variations.png" width="25px"></li>
+                    </ul>
+                </div>
+                <div class="footer-col-3">
+                    <h3>Useful Links</h3>
+                    <ul>
+                        <li>Promotions</li>
+                        <li>Rewards Program</li>
+                        <li>Return Policy</li>
+                        <li>Join Us</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>  
+
+    <script>
+        const userName = localStorage.getItem('loginuserName') || 'User';
+        const userEmail = localStorage.getItem('loginuserEmail') || 'user@example.com';
+
+        document.getElementById('userName').textContent = userName;
+        document.getElementById('profileName').textContent = userName;
+        document.getElementById('profileEmail').textContent = userEmail;
+    </script>
+</body>
+</html>

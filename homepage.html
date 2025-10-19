@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Meow Screen Cinemas</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+
+    <body>
+      <div class="header">
+        <div class="navbar">
+            <div class="logo">
+                <img src="pics/logo.png" width="130px" height="130px">  
+            </div>
+            <nav>
+                <ul id="menuitems">
+                    <li><a href="homepage.html">Home</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                    <li><a href="account.html">Account</a></li>
+                </ul>
+            </nav>
+            <div class="search-bar">
+                <input type="text" placeholder="Search for movies...">
+                <button type="submit">Search</button>
+            </div>
+            <a href="contact.html">
+                <img src="pics/phone.png" width="30px" height="30px"></a>
+                <img src="pics/menu.png" class="menu-icon" onclick="menutoggle()">
+        </div>
+            <div class="row">
+                <div class="col-2">
+                    <h1>Experience The Magic<br> with MSC!</h1>
+                    <p>Let the movies transport you, <br> through a night of popcorn, laughter, and comfort.</p>
+                    <a href="" class="btn">Explore Now &#8594;</a>
+                </div>
+                <div class="col-2">
+                    <img src="pics/film strip.png">
+                </div>
+            </div>
+        </div>   
+      </div>
+
+      <div class="movie-screenings">
+        <h2 class="title">Featured Screenings</h2>
+        <div class="small-container">
+            <div class="row">
+                <button class="carousel-btn left-btn">&#9664;</button>
+                <ul id="movie-list" class="row">
+                    <li class="col-3" data-title="Avengers">
+                        <img src="pics/avengers.jpg" alt="Avengers poster">
+                        <h3>Movie 1: Avengers</h3>
+                        <p>Available Dates: 8/17, 8/24, 9/3</p>
+                        <p>Showtimes: 10:00 AM, 1:00 PM, 4:30 PM</p>
+                        <span class="rating">★ 4.9</span>
+                        <a href="bookingpage.html" class="smallbtn">Book Now &#8594;</a>
+                    </li>
+                    <li class="col-3" data-title="Inside Out 2">
+                        <img src="pics/insideout.jpg" alt="Inside Out 2 poster">
+                        <h3>Movie 2: Inside Out 2</h3>
+                        <p>Available Dates: 8/1, 8/15, 8/30</p>
+                        <p>Showtimes: 2:30 PM, 5:00 PM, 8:00 PM</p>
+                        <span class="rating">★ 4.9</span>
+                        <a href="bookingpage.html" class="smallbtn">Book Now &#8594;</a>
+                    </li>
+                    <li class="col-3" data-title="Inception">
+                        <img src="pics/inception.jpg" alt="Inception poster">
+                        <h3>Movie 3: Inception</h3>
+                        <p>Available Dates: 9/2, 9/10, 8/18</p>
+                        <p>Showtimes: 12:00 PM, 6:00 PM, 9:00 PM</p>
+                        <span class="rating">★ 4.3</span>
+                        <a href="bookingpage.html" class="smallbtn">Book Now &#8594;</a>
+                    </li>
+                </ul>
+                 <button class="carousel-btn right-btn">&#9654;</button>
+            </div>
+          </div>
+        </div>
+            <h2 class="title">Latest Deals</h2>
+            <div class="row">
+                <div class="col-4">
+                    <img src="pics/register.jpg" class="image">
+                    <div class="overlay">
+                        <div class="boxtext">Monthly Rewards Available</div>
+                    </div>
+                </div>
+                <div class="col-4">
+                    <img src="pics/popcorn.jpg" class="image">
+                    <div class="overlay">
+                        <div class="boxtext">Flavourful Snacks Available</div>
+                    </div>
+                </div>
+                <div class="col-4">
+                    <img src="pics/customer.jpg" class="image">
+                    <div class="overlay">
+                        <div class="boxtext">24-Hour Customer Service</div>
+                    </div>
+            </div>
+        </div>
+        <!--------offer-------->
+        <div class="offer">
+           <div class="small-container">
+            <div class="row">
+                <div class="col-2">
+                    <img src="pics/poster.jpg" class="offer-img">
+
+                </div>
+                <div class="col-2">
+                    <h1>Exclusive Screening of 'Tiger Stripes'</h1>
+                    <small> Feast on this deliciously subversive Malaysian Oscar submission.
+                    </small>
+                    <a href="bookingpage.html" class="btn">Reserve Your Spot &#8594;</a>               </div>
+            </div>
+           </div> 
+        </div>  
+        <!--------brand logos-------->
+           <div class="brands">
+            <h3 class="title">In Collaboration With</h3>
+            <div class="small-container">
+                <div class="row">
+                  <div class="col-5">
+                    <img src="pics/sunway1.jpg">
+                  </div>  
+                  <div class="col-5">
+                    <img src="pics/sunway2.png">
+                  </div> 
+                  <div class="col-5">
+                    <img src="pics/sunway3.png">
+                  </div> 
+                  <div class="col-5">
+                    <img src="pics/sunway4.jpg">
+                  </div> 
+                  <div class="col-5">
+                    <img src="pics/sunway5.png">
+                </div>
+            </div>
+           </div> 
+           <div class="footer">
+            <div class="footer-container">
+                <div class="row">
+                    <div class="footer-col-1">
+                        <h3>Download Our App</h3>
+                        <p>Available on Android and IOS today.</p>
+                        <div class="app-logo">
+                            <img src="pics/playstore.png">
+                            <img src="pics/appstore.png">
+                        </div>
+                    </div>
+                    <div class="footer-col-4">
+                        <h3>Follow us on:</h3>
+                        <ul>
+                            <li><img src="pics/insta1.jpeg" width="30px"></li>
+                            <li><img src="pics/facebook.png" width="30px"></li>
+                            <li><img src="pics/logo-variations.png" width="25px"></li>
+                        </ul>
+                    </div>
+                    <div class="footer-col-3">
+                        <h3>Useful Links</h3>
+                        <ul>
+                            <li>Promotions</li>
+                            <li>Rewards Program</li>
+                            <li>Return Policy</li>
+                            <li>Join Us</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+           </div>           
+    </body>
+</html>

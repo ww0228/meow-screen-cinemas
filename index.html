@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Login Page</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="login&signup.css">
+</head>
+<body>
+    <div id="loginContainer" class="loginSignUpContainer">
+        <div class="col1">
+            <form name="loginpage" id="loginpage" onsubmit="return Homepage()">
+            <div class="header">
+                <div class="logo">
+                    <img src="pics/logo.png" width="130px" height="130px">  
+                </div>
+                <p class="title">Login into your account</p>
+            </div>
+
+                <label for="username">Username</label>
+                <input type="text" placeholder="Enter your username" id="username" name="username" required>
+                <div class="error-message" id="usernameError"></div>
+
+                <label for="email">Email Address</label>
+                <input type="email" placeholder="maddie@gmail.com" id="email" name="email" required>
+                <div class="error-message" id="emailError"></div>
+
+                <label for="password">Password</label>
+                <input type="password" placeholder="Enter your password" id="password" name="password" required>
+                <div class="error-message" id="passwordError"></div>
+
+                <button type="submit" class="login-btn">Login now</button>
+
+                <p>OR</p>
+
+                <button type="button" class="signupnow-btn" onclick="window.location.href='signup.html'">Sign Up now</button>
+
+            </form>
+
+            <div class="success-message">Login successfully!<br>Redirecting to Home Page...</div>
+        </div>
+
+        <div class="col2">
+        </div>
+    </div>
+
+    <script>
+        function Homepage() {
+            let valid = true;
+
+            if (!validateUsername()) valid = false;
+            if (!validateEmail()) valid = false;
+            if (!validatePassword()) valid = false;
+
+            if (valid) {
+                if (validateLogin()) {
+                    saveLoginData();
+                    showLoginSuccessMessage();
+                    return false; 
+                } else {
+                    return false; // Prevent form submission if validation fails
+                }
+            }
+            return valid;
+        }
+
+        function validateLogin() {
+            const username = document.getElementById('username').value;
+            const email = document.getElementById('email').value;
+            const password = document.getElementById('password').value;
+
+            const storedUsername = localStorage.getItem('signupUsername');
+            const storedEmail = localStorage.getItem('signupEmail');
+            const storedPassword = localStorage.getItem('signupPassword');
+
+            if (username !== storedUsername) {
+                document.getElementById('usernameError').innerText = 'Username does not match with Sign Up info.';
+                return false;
+            }
+
+            if (email !== storedEmail) {
+                document.getElementById('emailError').innerText = 'Email does not match with Sign Up info.';
+                return false;
+            }
+
+            if (password !== storedPassword) {
+                document.getElementById('passwordError').innerText = 'Password does not match with Sign Up info.';
+                return false;
+            }
+
+            return true;
+        }
+
+        function saveLoginData() {
+            localStorage.setItem('loginuserName', document.getElementById('username').value);
+            localStorage.setItem('loginuserEmail', document.getElementById('email').value);
+        }
+
+        function showLoginSuccessMessage() {
+            document.getElementById('loginContainer').classList.add('submitted');
+            setTimeout(function () { 
+                window.location.href='opening.html';
+            }, 1000);
+        }
+
+        function validateUsername() {
+            const username = document.getElementById('username').value;
+            const usernameError = document.getElementById('usernameError');
+
+            if (username.trim() === '') {
+                usernameError.innerText = 'Username is required.';
+                return false;
+            } else {
+                usernameError.innerText = '';
+                return true;
+            }
+        }
+
+        function validateEmail() {
+            const email = document.getElementById('email').value;
+            const emailError = document.getElementById('emailError');
+            const emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{3,6}$/;
+
+            if (email.trim() === '') {
+                emailError.innerText = 'Email is required.';
+                return false;
+            }
+            else if (!emailPattern.test(email)) {
+                emailError.innerText = 'Invalid email address.';
+                return false;
+            } else {
+                emailError.innerText = '';
+                return true;
+            }
+        }
+
+        function validatePassword() {
+            const password = document.getElementById('password').value;
+            const passwordError = document.getElementById('passwordError');
+            const passwordPattern = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}/;
+
+            if (password.trim() === '') {
+                passwordError.innerText = 'Password is required.';
+                return false;
+            }
+            else if (!passwordPattern.test(password)) {
+                passwordError.innerText = 'Must contain at least 1 number & 1 uppercase and lowercase letter, and at least 8 or more characters';
+                return false;
+            } else {
+                passwordError.innerText = '';
+                return true;
+            }
+        }
+
+        document.getElementById('username').addEventListener('input', validateUsername);
+        document.getElementById('email').addEventListener('input', validateEmail);
+        document.getElementById('password').addEventListener('input', validatePassword);
+    </script>
+</body>
+</html>

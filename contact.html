@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="contact.css">
+</head>
+<body>
+<div class = "header">
+    <header>
+        <div class="navbar">
+            <div class="logo">
+                <img src="pics/logo.png" width="130px" height="130px">  
+            </div>
+            <div class="contact-us"> 
+                <h1>Contact Us</h1>
+            </div>
+            <nav>
+                <ul id="menuitems">
+                    <li><a href="homepage.html">Home</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                    <li><a href="account.html">Account</a></li>
+                </ul>
+            </nav>
+            <a href="contact.html">
+                <img src="pics/phone.png" width="30px" height="30px"></a>
+                <img src="pics/menu.png" class="menu-icon" onclick="menutoggle()">
+        </div>
+     </header>
+    <div class="container">
+        <div class="map-contact">
+            <div class="map">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.019026946053!2d-122.41941558468398!3d37.77492977975971!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8085809c5d2d7e09%3A0x68d13a3a2385c0b1!2sSan+Francisco%2C+CA%2C+USA!5e0!3m2!1sen!2sin!4v1535140457460"
+                    width="600" height="450" frameborder="0" style="border:0"></iframe>
+            </div>
+            <div class="contact-details">
+                <h3>For general inquiries, contact us at:</h3>
+                <p>Email: meowscreeninquiry@gmail.com</p>
+                <p>Phone: (+60)14-2331839</p>
+            </div>
+        </div>
+        <div class="form-container" id="formContainer">
+            <h1>Contact Form</h1>
+            <div class = "hiddenform">
+                <form id="contactForm" method="GET" onsubmit="return validateForm()">
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name">
+                        <div class="error-message" id="nameError"></div>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Contact Number</label>
+                        <input type="tel" id="phone" name="phone" placeholder="e.g. 0123456789">
+                        <div class="error-message" id="phoneError"></div>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email">
+                        <div class="error-message" id="emailError"></div>
+                    </div>
+                    <div class="form-group">
+                        <label for="category">Category</label>
+                        <select id="category" name="category" >
+                            <option value="">Select...</option>
+                            <option value="booking">Booking</option>
+                            <option value="general-enquiries">General Enquiries</option>
+                            <option value="movies-tickets-price-hall-types">Movies / Tickets Price / Hall Types</option>
+                            <option value="movies-promotions">Movies Promotions</option>
+                            <option value="movie-vouchers-merchandise">Movie Vouchers and Merchandise</option>
+                            <option value="cinemas-feedback-complaint">Cinemas Feedback and Complaint</option>
+                            <option value="compliment">Compliment</option>
+                            <option value="lost-and-found">Lost and Found</option>
+                            <option value="private-hall-booking-event">Private Hall Booking and Event</option>
+                            <option value="advertise-with-us">Advertise with Us</option>
+                            <option value="partnership-sponsorship">Partnership and Sponsorship</option>
+                            <option value="recruitment">Recruitment</option>
+                        </select>
+                        <div class="error-message" id="categoryError"></div>
+                    </div>
+                    <div class="form-group">
+                        <label for="occurdate">Occur Date</label>
+                        <input type="date" id="occurdate" name="occurdate">
+                        <div class="error-message" id="occurdateError"></div>
+                    </div>
+                    <div class="form-group">
+                        <label for="subject">Subject</label>
+                        <input type="text" id="subject" name="subject">
+                        <div class="error-message" id="subjectError"></div>
+                    </div>
+                    <div class="form-group">
+                        <label for="description">Description</label>
+                        <textarea id="description" name="description" rows="4"></textarea>
+                        <div class="error-message" id="descriptionError"></div>
+                    </div>
+                    <div class="form-group">
+                        <button type="submit" name="submitted" value="true">Submit</button>
+                    </div>
+                </form>
+                <p class="success-message">Thank you for contacting us. <br>We will be in touch with you very soon.</p>
+            </div>
+    </div>
+</div>
+    <footer>
+        <div class="footer">
+            <div class="footer-container">
+                <div class="row">
+                    <div class="footer-col-1">
+                        <h3>Download Our App</h3>
+                        <p>Available on Android and IOS today.</p>
+                        <div class="app-logo">
+                            <img src="pics/playstore.png">
+                            <img src="pics/appstore.png">
+                        </div>
+                    </div>
+                    <div class="footer-col-2">
+                        <h3>Follow us on:</h3>
+                        <ul>
+                            <li><img src="pics/insta1.jpeg" width="30px"></li>
+                            <li><img src="pics/facebook.png" width="30px"></li>
+                            <li><img src="pics/logo-variations.png" width="25px"></li>
+                        </ul>
+                    </div>
+                    <div class="footer-col-3">
+                        <h3>Useful Links</h3>
+                        <ul>
+                            <li>Promotions</li>
+                            <li>Rewards Program</li>
+                            <li>Return Policy</li>
+                            <li>Join Us</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        <script>
+            function validateForm() {
+                let valid = true;
+    
+                // Validate name
+                if (!validateName()) valid = false;
+    
+                // Validate phone
+                if (!validatePhone()) valid = false;
+    
+                // Validate email
+                if (!validateEmail()) valid = false;
+    
+                // Validate category
+                if (!validateCategory()) valid = false;
+        
+                // Validate subject
+                if (!validateSubject()) valid = false;
+    
+                // Validate description
+                if (!validateDescription()) valid = false;
+                
+                if (valid) {
+                    showSuccessMessage();
+                    return false; 
+                }
+    
+                return valid;
+            }
+    
+            function showSuccessMessage() {
+                document.getElementById('formContainer').classList.add('submitted');
+            }
+    
+            function validateName() {
+                const name = document.getElementById('name').value;
+                const nameError = document.getElementById('nameError');
+                const namePattern = /^[A-Za-z]+$/;
+    
+                if (name.trim() == '') {
+                    nameError.innerText = 'Name is required.';
+                    return false;
+                }
+                else if (!namePattern.test(name)) {
+                    nameError.innerText = 'Name must contain only letters.';
+                    return false;
+                } else {
+                    nameError.innerText = '';
+                    return true;
+                }
+            }
+    
+            function validatePhone() {
+                const phone = document.getElementById('phone').value;
+                const phoneError = document.getElementById('phoneError');
+                const phonePattern = /^\d{10,12}$/;
+    
+                if (phone.trim() == '') {
+                    phoneError.innerText = 'Phone number is required.';
+                    return false;
+                }
+                else if (!phonePattern.test(phone)) {
+                    phoneError.innerText = 'Phone number must be 10-12 digits.';
+                    return false;
+                } else {
+                    phoneError.innerText = '';
+                    return true;
+                }
+            }
+    
+            function validateEmail() {
+                const email = document.getElementById('email').value;
+                const emailError = document.getElementById('emailError');
+                const emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{3,6}$/;
+                
+                if (email.trim() == '') {
+                    emailError.innerText = 'Email is required.';
+                    return false;
+                }
+                if (!emailPattern.test(email)) {
+                    emailError.innerText = 'Invalid email address.';
+                    return false;
+                } else {
+                    emailError.innerText = '';
+                    return true;
+                }
+            }
+    
+            function validateCategory() {
+                const category = document.getElementById('category').value;
+                const categoryError = document.getElementById('categoryError');
+                if (category == '') {
+                    categoryError.innerText = 'Please select a category.';
+                    return false;
+                } else {
+                    categoryError.innerText = '';
+                    return true;
+                }
+            }
+    
+            function validateSubject() {
+                const subject = document.getElementById('subject').value;
+                const subjectError = document.getElementById('subjectError');
+                if (subject.trim() == '') {
+                    subjectError.innerText = 'Subject is required.';
+                    return false;
+                } else {
+                    subjectError.innerText = '';
+                    return true;
+                }
+            }
+    
+            function validateDescription() {
+                const description = document.getElementById('description').value;
+                const descriptionError = document.getElementById('descriptionError');
+                if (description.trim() == '') {
+                    descriptionError.innerText = 'Description is required.';
+                    return false;
+                } else {
+                    descriptionError.innerText = '';
+                    return true;
+                }
+            }
+    
+            // Event listeners for real-time validation
+            document.getElementById('name').addEventListener('input', validateName);
+            document.getElementById('phone').addEventListener('input', validatePhone);
+            document.getElementById('email').addEventListener('input', validateEmail);
+            document.getElementById('category').addEventListener('change', validateCategory);
+            document.getElementById('subject').addEventListener('input', validateSubject);
+            document.getElementById('description').addEventListener('input', validateDescription);
+    
+        </script>
+</body>
+
+</html>

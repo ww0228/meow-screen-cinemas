@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Meow Screen Cinemas</title>
+  <style>
+    body {
+      font-family: 'Segoe Ui', sans-serif;
+      font-weight: bold;
+      margin: 0;
+      height: 100vh; 
+      background: linear-gradient(to bottom right, #ff8c00, #ffaf4a); 
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      color: white; 
+      position: relative;
+      background: radial-gradient(#ff9500,#ffffff);
+    }
+
+    a {
+      text-decoration: none;
+      color: white;
+      font-size: 24px;
+      position: relative;
+      z-index: 1;
+      margin-top: 20px; 
+    }
+
+    a:hover {
+      text-decoration: underline; 
+    }
+
+    .logo-container {
+      position: relative;
+    }
+
+    .logo {
+      width: 35%; 
+    }
+
+    .brand {
+      font-size: 18px;
+      font-weight: normal;
+      font-style: italic; 
+    }
+
+    .colors {
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    .color {
+      height: 100%;
+      width: 100%;
+      position: absolute;
+      inset: 0;
+      animation-name: fill;
+      animation-duration: 500ms;
+      animation-timing-function: ease-in-out;
+      animation-fill-mode: forwards;
+      transform: translateY(100%);
+      animation-play-state: paused;
+    }
+
+    .red {
+      background-color: red;
+    }
+
+    .yellow {
+      z-index: 2;
+      background-color: yellow;
+      animation-delay: 100ms;
+    }
+
+    .blue {
+      z-index: 3;
+      background-color: blue;
+      animation-delay: 200ms;
+    }
+
+    @keyframes fill {
+      0% {
+        transform: translateY(100%);
+      }
+      100% {
+        transform: translateY(0%);
+      }
+    }
+  </style>
+
+  <script>
+    function handleClick(e) {
+      e.preventDefault();
+      const logoContainer = document.querySelector(".logo-container");
+      const colors = document.querySelectorAll(".color");
+
+      logoContainer.style.opacity = "0";
+      logoContainer.style.pointerEvents = "none"; 
+
+      colors.forEach((color, i) => {
+        color.style.animationPlayState = "running";
+      });
+      const lastColor = colors[colors.length - 1];
+
+      lastColor.addEventListener("animationend", () => {
+        setTimeout(() => {
+          window.location.href = e.target.href; 
+        }, 500);
+      });
+    }
+  </script>
+</head>
+<body>
+  <div class="logo-container">
+    <img src="pics/logo.png" alt="Logo" class="logo">
+    <div class="brand">Meow Screen Cinemas</div>
+  </div>
+  <h2>Welcome, <span id="userName"></span>!</h2>
+  <a href="homepage.html" onclick="handleClick(event)">✨Experience the Magic✨</a>
+  <div class="colors">
+    <div class="color red"></div>
+    <div class="color blue"></div>
+    <div class="color yellow"></div>
+  </div>
+
+  <script>
+    const userName = localStorage.getItem('loginuserName') || 'User';
+    document.getElementById('userName').textContent = userName;
+</script>
+
+</body>
+</html>

@@ -1,0 +1,67 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background:#ff7429;
+    color: #fff;
+    padding: 1rem;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+}
+
+nav {
+    margin-top: 0.5rem;
+}
+
+nav a {
+    color: #fff;
+    margin: 0 1rem;
+    text-decoration: none;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+main {
+    padding: 2rem;
+    max-width: 800px;
+    margin: auto;
+}
+
+.terms h2 {
+    color: #333;
+}
+
+.terms h3 {
+    color: #555;
+    margin-top: 1.5rem;
+}
+
+.terms h4 {
+    color: #666;
+    margin-top: 1rem;
+}
+
+ul {
+    margin: 0;
+    padding-left: 1.5rem;
+}
+
+footer {
+    background: #ff7429;
+    color: #fff;
+    padding: 1rem;
+    text-align: center;
+}
+
+footer p {
+    margin: 0;
+}

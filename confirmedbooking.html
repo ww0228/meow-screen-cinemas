@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ticket Summary</title>
+    <link rel="stylesheet" href="confirmed.css">
+</head>
+<body>
+    <header>
+        <div class="navbar">
+            <div class="logo">
+                <img src="pics/logo.png" width="130px" height="130px">  
+            </div>
+            <nav>
+                <ul id="menuitems">
+                    <li><a href="homepage.html">Home</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                    <li><a href="account.html">Account</a></li>
+                </ul>
+            </nav>
+            <a href="contact.html">
+                <img src="pics/phone.png" width="30px" height="30px"></a>
+                <img src="pics/menu.png" class="menu-icon" onclick="menutoggle()">
+        </div>
+     </header>
+     <div id="title-container">
+        <h1>TICKET IS READY!</h1>
+    </div>
+    <div class="ticket-container">
+        <div class="ticket">
+            <div class="left-column">
+                <div class="ticket-details">
+                    <p>Movie Title:  <span id="movie-title"></span></p>
+                    <p>Number of Seats:  <span id="ticket-info">2</span></p>
+                    <p>Seat Numbers:  <span id="ticket-info">A1, A2</span></p>
+                    <p>Time:  <span id="ticket-info">10:00AM</span></p>
+                    <p>Date:  <span id="ticket-info">1/8/2024</span></p>
+                    <p>Venue:  <span id="ticket-info">Sunway Pyramid</span></p>
+                    <p>Hall Number:  <span id="ticket-info">Hall 10</span></p>
+                </div>
+            </div>
+            <div class="right-column">
+                <img  id="qrcode" src="pics/qrcode.jpg" alt="QRCODE" title="QRCODE TICKET">
+                <div id="qr-info">
+                    SCAN THIS TICKET AT THE COUNTER
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer></footer>
+    
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const confirmedmovie = localStorage.getItem('selectedmovie'); 
+        document.getElementById('movie-title').textContent = confirmedmovie; 
+        });
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,227 @@
+body {
+    font-family: 'Segoe Ui', sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+@media (max-width: 720px) {
+    .loginSignUpContainer {
+        flex-direction: column;
+    }
+    .col1,.col2 {
+        height: 50vh;
+    }
+    .col2 {
+        margin-top: 0;
+    }
+}
+
+.loginSignUpContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-wrap: wrap;
+}
+
+.col1 {
+    flex:1;
+    overflow-y: scroll;
+    min-width: 300px;
+    height: 100%;
+    box-sizing: border-box;
+    margin-left:25px;
+    padding: 20px;
+}
+
+.col2 {
+    flex: 1;
+    min-width: 300px; 
+    height: 100%;
+    box-sizing: border-box;
+    background-image: url('https://i.cbc.ca/1.5668913.1675287209!/cumulusImage/httpImage/image.jpg_gen/derivatives/16x9_780/marvel-s-black-panther-special-screening-toronto.jpg');
+    background-position: center;
+    background-size: cover;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.header {
+    display: flex;
+    margin-bottom: 10px;
+}
+
+.title {
+    font-size: 20px;
+    margin-top: 70px;
+    margin-right: 10px;
+    margin-left: 20px;
+}
+
+.logo {
+    top: 0px;
+    left: 0px;
+    z-index: 1;
+    width: 150px;
+    height: 150px;
+    margin: 0px;
+}
+
+.logo img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+    width: 90%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    cursor: pointer;
+}
+
+button.login-btn {
+    width: 90%;
+    padding: 10px 15px;
+    margin-left: 10px;
+    border: 2px solid #ff523b;
+    border-radius: 5px;
+    background-color: #ff523b;
+    font-size: 16px;
+    color: white;
+}
+
+button.signupnow-btn {
+    width: 90%;
+    padding: 10px 15px;
+    margin-left: 10px;
+    margin-bottom: 15px;
+    border: 2px solid #ff523b;
+    border-radius: 5px;
+    background-color: white;
+    font-size: 16px;
+    color: #ff523b;
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+button.signup-btn {
+    padding: 10px 15px;
+    border: 2px solid #ff523b;
+    border-radius: 5px;
+    background-color: white;
+    font-size: 16px;
+    color: #ff523b;
+}
+
+button.cancel-btn {
+    padding: 10px 20px;
+    margin-right: 10px;
+    border: 2px solid #ff523b;
+    border-radius: 5px;
+    background-color: #ff523b;
+    font-size: 16px;
+    color: white;
+}
+
+button.login-btn:hover {
+    border: 2px solid #971313;
+    background: #971313;
+}
+
+button.signup-btn:hover {
+    border: 2px solid rgb(255, 209, 195);
+    background: rgb(255, 209, 195);
+}
+
+button.cancel-btn:hover {
+    border: 2px solid #971313;
+    background: #971313;
+}
+
+a {
+    display: inline-block;
+    margin-top: 10px;
+    color: #5cb85c;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+h6 {
+    margin: 0;
+    margin-bottom: 15px;
+    font-size: 24px;
+    color: #333;
+}
+
+.remember-forgot-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.remember-forgot-container label {
+    margin: 0;
+}
+
+.remember-forgot-container a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.remember-forgot-container a:hover {
+    text-decoration: underline;
+}
+
+p {
+    margin-right: 30px;
+    text-align: center;
+}
+
+p.title {
+    margin-bottom: 20px;
+}
+
+.error-message {
+    color: red;
+    font-size: 12px;
+    margin-top: 10px;
+    margin-bottom: 30px;
+}
+
+.success-message {
+    display: none;
+    position: absolute;
+    top: 45%;
+    left: 14%;
+    text-align: center;
+    color: green;
+    font-size: 30px;
+}
+
+.submitted .success-message {
+    display: block;
+}
+
+.submitted form {
+    display: none;
+}
+
+

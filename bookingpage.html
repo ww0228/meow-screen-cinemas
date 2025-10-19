@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Book your ticket</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="stylebooking.css">
+    </head>
+    <body>  
+        <header>
+            <div class="navbar">
+                <div class="logo">
+                    <img src="pics/logo.png" width="130px" height="130px">  
+                </div>
+                <nav>
+                    <ul id="menuitems">
+                        <li><a href="homepage.html">Home</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                        <li><a href="account.html">Account</a></li>
+                    </ul>
+                </nav>
+                <a href="contact.html">
+                    <img src="pics/phone.png" width="30px" height="30px"></a>
+                    <img src="pics/menu.png" class="menu-icon" onclick="menutoggle()">
+            </div>
+        </header>
+        <div id="title-container">
+            <h1>SELECT YOUR SEATS</h1>
+            <div class="dropdown-container">
+                <label for="movie-dropdown">Select your movie:</label>
+                <select id="movie-dropdown">
+                    <option value="Avengers">Avengers</option>
+                    <option value="Inside Out 2">Inside Out 2</option>
+                    <option value="Inception">Inception</option>
+                </select>
+            </div>       
+       </div>
+        <div class="container">
+            <div class="screen">SCREEN</div>
+            <div class="row">
+                <div class="seat">A1</div>
+                <div class="seat">A2</div>
+                <div class="seat">A3</div>
+                <div class="seat">A4</div>
+                <div class="seat">A5</div>
+                <div class="seat">A6</div>
+                <div class="seat">A7</div>
+                <div class="seat">A8</div>
+                <div class="seat">A9</div>
+                <div class="seat">A10</div>
+                <div class="seat">A11</div>
+                <div class="seat">A12</div>
+                <div class="seat">A13</div>
+                <div class="seat">A14</div>
+                <div class="seat">A15</div>
+                <div class="seat">A16</div>
+            </div>
+            <div class="row">
+                <div class="seat">B1</div>
+                <div class="seat">B2</div>
+                <div class="seat">B3</div>
+                <div class="seat">B4</div>
+                <div class="seat">B5</div>
+                <div class="seat">B6</div>
+                <div class="seat">B7</div>
+                <div class="seat">B8</div>
+                <div class="seat">B9</div>
+                <div class="seat">B10</div>
+                <div class="seat">B11</div>
+                <div class="seat">B12</div>
+                <div class="seat">B13</div>
+                <div class="seat">B14</div>
+                <div class="seat">B15</div>
+                <div class="seat">B16</div>
+            </div>
+
+            <div class="row">
+                <div class="seat">C1</div>
+                <div class="seat">C2</div>
+                <div class="seat">C3</div>
+                <div class="seat">C4</div>
+                <div class="seat">C5</div>
+                <div class="seat">C6</div>
+                <div class="seat">C7</div>
+                <div class="seat">C8</div>
+                <div class="seat">C9</div>
+                <div class="seat">C10</div>
+                <div class="seat">C11</div>
+                <div class="seat">C12</div>
+                <div class="seat">C13</div>
+                <div class="seat">C14</div>
+                <div class="seat">C15</div>
+                <div class="seat">C16</div>
+            </div>
+
+            <div class="row">
+                <div class="seat">D1</div>
+                <div class="seat">D2</div>
+                <div class="seat">D3</div>
+                <div class="seat">D4</div>
+                <div class="seat">D5</div>
+                <div class="seat">D6</div>
+                <div class="seat">D7</div>
+                <div class="seat">D8</div>
+                <div class="seat">D9</div>
+                <div class="seat">D10</div>
+                <div class="seat">D11</div>
+                <div class="seat">D12</div>
+                <div class="seat">D13</div>
+                <div class="seat">D14</div>
+                <div class="seat">D15</div>
+                <div class="seat">D16</div>
+            </div>
+
+            <div class="row">
+                <div class="seat">E1</div>
+                <div class="seat">E2</div>
+                <div class="seat">E3</div>
+                <div class="seat">E4</div>
+                <div class="seat">E5</div>
+                <div class="seat">E6</div>
+                <div class="seat">E7</div>
+                <div class="seat">E8</div>
+                <div class="seat">E9</div>
+                <div class="seat">E10</div>
+                <div class="seat">E11</div>
+                <div class="seat">E12</div>
+                <div class="seat">E13</div>
+                <div class="seat">E14</div>
+                <div class="seat">E15</div>
+                <div class="seat">E16</div>
+            </div>
+
+            <div class="row">
+                <div class="seat">F1</div>
+                <div class="seat">F2</div>
+                <div class="seat">F3</div>
+                <div class="seat">F4</div>
+                <div class="seat">F5</div>
+                <div class="seat">F6</div>
+                <div class="seat">F7</div>
+                <div class="seat">F8</div>
+                <div class="seat">F9</div>
+                <div class="seat">F10</div>
+                <div class="seat">F11</div>
+                <div class="seat">F12</div>
+                <div class="seat">F13</div>
+                <div class="seat">F14</div>
+                <div class="seat">F15</div>
+                <div class="seat">F16</div>
+            </div>
+
+            <div class="row">
+                <div class="seat">G1</div>
+                <div class="seat">G2</div>
+                <div class="seat">G3</div>
+                <div class="seat">G4</div>
+                <div class="seat">G5</div>
+                <div class="seat">G6</div>
+                <div class="seat">G7</div>
+                <div class="seat">G8</div>
+                <div class="seat">G9</div>
+                <div class="seat">G10</div>
+                <div class="seat">G11</div>
+                <div class="seat">G12</div>
+                <div class="seat">G13</div>
+                <div class="seat">G14</div>
+                <div class="seat">G15</div>
+                <div class="seat">G16</div>
+            </div>
+
+            <div class="row">
+                <div class="seat">H1</div>
+                <div class="seat">H2</div>
+                <div class="seat">H3</div>
+                <div class="seat">H4</div>
+                <div class="seat">H5</div>
+                <div class="seat">H6</div>
+                <div class="seat">H7</div>
+                <div class="seat">H8</div>
+                <div class="seat">H9</div>
+                <div class="seat">H10</div>
+                <div class="seat">H11</div>
+                <div class="seat">H12</div>
+                <div class="seat">H13</div>
+                <div class="seat">H14</div>
+                <div class="seat">H15</div>
+                <div class="seat">H16</div>
+            </div>
+
+            <div class="row">
+                <div class="seat">I1</div>
+                <div class="seat">I2</div>
+                <div class="seat">I3</div>
+                <div class="seat">I4</div>
+                <div class="seat">I5</div>
+                <div class="seat">I6</div>
+                <div class="seat">I7</div>
+                <div class="seat">I8</div>
+                <div class="seat">I9</div>
+                <div class="seat">I10</div>
+                <div class="seat">I11</div>
+                <div class="seat">I12</div>
+                <div class="seat">I13</div>
+                <div class="seat">I14</div>
+                <div class="seat">I15</div>
+                <div class="seat">I16</div>
+            </div>
+
+            <div class="row">
+                <div class="seat">J1</div>
+                <div class="seat">J2</div>
+                <div class="seat">J3</div>
+                <div class="seat">J4</div>
+                <div class="seat">J5</div>
+                <div class="seat">J6</div>
+                <div class="seat">J7</div>
+                <div class="seat">J8</div>
+                <div class="seat">J9</div>
+                <div class="seat">J10</div>
+                <div class="seat">J11</div>
+                <div class="seat">J12</div>
+                <div class="seat">J13</div>
+                <div class="seat">J14</div>
+                <div class="seat">J15</div>
+                <div class="seat">J16</div>
+            </div>
+
+            <div class="row">
+                <div class="seat">K1</div>
+                <div class="seat">K2</div>
+                <div class="seat">K3</div>
+                <div class="seat">K4</div>
+                <div class="seat">K5</div>
+                <div class="seat">K6</div>
+                <div class="seat">K7</div>
+                <div class="seat">K8</div>
+                <div class="seat">K9</div>
+                <div class="seat">K10</div>
+                <div class="seat">K11</div>
+                <div class="seat">K12</div>
+                <div class="seat">K13</div>
+                <div class="seat">K14</div>
+                <div class="seat">K15</div>
+                <div class="seat">K16</div>
+            </div>
+            
+            <div class="row">
+                <div class="seat">L1</div>
+                <div class="seat">L2</div>
+                <div class="seat">L3</div>
+                <div class="seat">L4</div>
+                <div class="seat">L5</div>
+                <div class="seat">L6</div>
+                <div class="seat">L7</div>
+                <div class="seat">L8</div>
+                <div class="seat">L9</div>
+                <div class="seat">L10</div>
+                <div class="seat">L11</div>
+                <div class="seat">L12</div>
+                <div class="seat">L13</div>
+                <div class="seat">L14</div>
+                <div class="seat">L15</div>
+                <div class="seat">L16</div>
+            </div>
+
+            <div class="row">
+                <div class="seat">M1</div>
+                <div class="seat">M2</div>
+                <div class="seat">M3</div>
+                <div class="seat">M4</div>
+                <div class="seat">M5</div>
+                <div class="seat">M6</div>
+                <div class="seat">M7</div>
+                <div class="seat">M8</div>
+                <div class="seat">M9</div>
+                <div class="seat">M10</div>
+                <div class="seat">M11</div>
+                <div class="seat">M12</div>
+                <div class="seat">M13</div>
+                <div class="seat">M14</div>
+                <div class="seat">M15</div>
+                <div class="seat">M16</div>
+            </div>
+        </div>
+
+        <p id="message"></p>
+        <button id="button" type="submit">CONFIRM</button>
+        <footer></footer>
+        <script src="booking.js"></script>
+    </body>
+</html>
